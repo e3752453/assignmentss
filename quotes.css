@@ -1,0 +1,37 @@
+/*
+Name: Plamedie Ngalula
+Date: 09.22.2024
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h1 {
+    color: #2E86C1;
+}
+
+#quotes, #websites {
+    margin-top: 20px;
+}
+
+a {
+    color: #2874A6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
