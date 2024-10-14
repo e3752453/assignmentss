@@ -1,5 +1,5 @@
 //	Student Name: Plamedie Ngalula
-//	File Name: quiz.html
+//	File Name: quiz.js
 //	Date: 10.06.2024 
 
 // Array of questions

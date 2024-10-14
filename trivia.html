@@ -1,0 +1,42 @@
+<!--
+	Student Name: Plamedie Ngalula
+	File Name: trivia.html
+	Date: 10.13.2024 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="trivia.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Trivia Game!</h1>
+        
+        <!-- Personalized Greeting -->
+        <div id="greeting"></div>
+        
+        <!-- User Friendly Date -->
+        <div id="date"></div>
+
+        <!-- Quote of the Day -->
+        <div id="quote"></div>
+
+        <!-- Trivia Quiz -->
+        <div id="trivia-container">
+            <div id="question">Loading...</div>
+            <input type="text" id="answer" placeholder="Type your answer here">
+            <button id="submit">Submit Answer</button>
+        </div>
+
+        <!-- Score -->
+        <div id="score-container">
+            <p>Your current score is: <span id="score">0</span></p>
+            <p>Your percentage is: <span id="percentage">0%</span></p>
+        </div>
+    </div>
+</body>
+</html>
