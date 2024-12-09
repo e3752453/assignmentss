@@ -1,0 +1,101 @@
+<!--
+Name: Plamedie Ngalula
+filename: AboutUs.html
+Date: 12.08.2024
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutUs.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to My Website</h1>
+            <p> This site shows what I've learned in my web development class! </p>
+        </section>
+
+        <!-- Assignments Section -->
+        <section id="assignments">
+            <h2>My Assignments</h2>
+            <ul>
+                <li><a href="assignment1.html">Assignment 1</a></li>
+                <li><a href="assignment2.html">Assignment 2</a></li>
+                <li><a href="assignment3.html">Assignment 3</a></li>
+            </ul>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p> Hi, I'm Plamedie Ngalula! This class has been a great experience for learning web development. I've learned how to:  </p>
+            
+            <ul>
+                <li> Use HTML to structure web pages  </li>
+                <li> Use CSS to style and design pages  </li>
+                <li> Use JavaScript to make pages interactive </li>
+                <li> Use jQuery to add dynamic effect s</li>
+            </ul>
+            <p>These skills will help me reach my goal of becoming a front-end web developer so I can create websites that are fun and easy to use. </p>
+
+            <button id="toggle-button">Show/Hide More Details</button>
+            <div id="details" style="display: none;">
+                <p>In this course, I also learned about debugging, validation, and testing, which are essential for building error-free applications.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Plamedie . Today's date: <span id="footer-date"></span></p>
+    </footer>
+
+    <script>
+        // JavaScript Custom Function
+        function displayDate() {
+            const today = new Date();
+            document.getElementById('footer-date').innerText = today.toDateString();
+        }
+        window.onload = displayDate;
+
+        // jQuery Effects
+        $(document).ready(function() {
+            // Toggle details section
+            $('#toggle-button').click(function() {
+                $('#details').slideToggle();
+            });
+
+            // Hover effect on navigation links
+            $('nav ul li a').hover(
+                function() {
+                    $(this).fadeTo(200, 0.5); // On hover
+                }, 
+                function() {
+                    $(this).fadeTo(200, 1); // On hover out
+                }
+            );
+
+            // Smooth scroll effect for navigation links
+            $('nav ul li a').click(function(event) {
+                event.preventDefault();
+                const target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 800);
+            });
+        });
+    </script>
+</body>
+</html>
